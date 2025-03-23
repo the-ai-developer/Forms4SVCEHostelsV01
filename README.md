@@ -1,38 +1,38 @@
-# SVCE Hostel Data Ingestion Framework
+# SVCE Hostel Data Engine 🌌
 
-## Synopsis
-React-based client (`forms.svcehostels.surge.sh`) leverages a GScript endpoint for data persistence into Sheets/Drive. CORS mitigated via `no-cors` fetch.
+## Core 💡
+React client @ `forms.svcehostels.surge.sh` 🔗 GScript API for Sheets/Drive persistence. CORS? Smashed with `no-cors` fetch! 💪
 
-## Architecture
-- **Client**: React + TS, Surge-hosted.
-- **API**: GScript Web App (`AKfycbwWC2-ZbBL34HsHcgdwNud1Ob14xqAfC7nI4jS9paFIp0qDT05pFKsSGNEezCvh3QWkZg`).
-- **Storage**: Sheets (tabular), Drive (binary).
+## Stack ⚙️
+- **Front**: React + TS ⚡ Surge-hosted 🌐
+- **API**: GScript (`AKfycbwWC2-ZbBL34HsHcgdwNud1Ob14xqAfC7nI4jS9paFIp0qDT05pFKsSGNEezCvh3QWkZg`) 🌍
+- **Data**: Sheets 📊 + Drive 🗄️
 
-## Workflow
-1. Multi-phase form → JSON payload.
-2. `fetch` (`no-cors`) → GScript.
-3. GScript → Sheets row + Drive blob URL.
+## Flow 🌊
+1. Multi-phase form → JSON 🎨
+2. `fetch` (`no-cors`) → GScript 🚀
+3. GScript → Sheets + Drive URL 🌠
 
-## Deploy
-- Client: `npm run build && surge build forms.svcehostels.surge.sh`.
-- GScript: Inject `<SHEET_ID>`, `<FOLDER_ID>`, deploy (Anyone).
+## Launch 🛠️
+- Client: `npm run build && surge build forms.svcehostels.surge.sh` 💨
+- GScript: Plug `<SHEET_ID>`, `<FOLDER_ID>`, deploy (Anyone) 🔑
 
-## Roadmap
-- Proxy layer (Node/Vercel) for CORS annihilation.
-- Custom TLD integration.
-- Schema validation (GScript).
-- Multi-binary ingestion.
-- Authenticated endpoint.
+## Next Gen 🌟
+- Proxy (Node/Vercel) for CORS kill 🔫
+- Custom TLD ⚜️
+- Schema lock (GScript) 🔒
+- Multi-file ingest 📁
+- API auth 🛡️
 
-## Contribution
-Fork → Branch → PR. High-IQ optimizations only.
+## Collab 🤝
+Fork → Branch → PR. Elite tweaks only, da! 🧠
 
-## Caveats
-- `no-cors` blinds response.
-- Form POST may redirect.
+## Glitches ⚠️
+- `no-cors` = blind response 😶
+- Form POST might teleport 🌐
 
-## Attribution
-Engineered amidst existential CORS crises by PrinceTheProgrammer [@the-ai-developer].
+## Built By 🏆
+[@the-ai-developer]—forged in CORS chaos! 🔥
 
-## License
-MIT
+## License 📜
+MIT—hack it! 🎉
