@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-gradient-shift { animation: gradientShift 15s ease infinite; }
+  .animate-fade-in { animation: fadeIn 1s ease-in-out; }
+  .animate-glow { animation: glow 1.5s infinite alternate; }
+  .animate-twinkle { animation: twinkle 3s infinite; }
+  .animate-float-1 { animation: float1 10s infinite ease-in-out; }
+  .animate-float-2 { animation: float2 12s infinite ease-in-out; }
+  .animate-float-3 { animation: float3 14s infinite ease-in-out; }
+  .animate-float-4 { animation: float4 16s infinite ease-in-out; }
+  .animate-float-5 { animation: float5 18s infinite ease-in-out; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px rgba(255, 193, 7, 0.8), 0 0 20px rgba(255, 105, 180, 0.6); }
+  50% { text-shadow: 0 0 15px rgba(255, 193, 7, 1), 0 0 30px rgba(255, 105, 180, 0.8); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes float1 { /* Same as before, keeping it sexy */ }
+@keyframes float2 { /* Same as before */ }
+@keyframes float3 { /* Same as before */ }
+@keyframes float4 { /* Same as before */ }
+@keyframes float5 { /* Same as before */ }
+
+/* Custom Styles */
+.glass-card {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.floating-icon {
+  @apply w-12 h-12 rounded-full backdrop-blur-lg flex items-center justify-center text-gray-300;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input-field {
+  @apply w-full bg-white/10 border border-gray-600 rounded-lg py-3 px-4 pl-11 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-all hover:bg-white/15;
+}
+
+.select-field {
+  @apply appearance-none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+}
+
+.next-btn {
+  @apply bg-gradient-to-r from-pink-500 to-yellow-400 text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2 transition-all hover:-translate-y-1 hover:shadow-lg hover:from-pink-600 hover:to-yellow-500;
+}
+
+.submit-btn {
+  @apply bg-gradient-to-r from-pink-500 to-yellow-400 text-white font-bold py-4 px-8 rounded-lg flex items-center gap-2 transition-all;
+}
+
+.submit-btn:disabled {
+  @apply opacity-75 cursor-not-allowed;
+}
+
+.submit-btn:not(:disabled):hover {
+  @apply -translate-y-1 shadow-lg from-pink-600 to-yellow-500;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ff69b4, #ffd700);
+  border-radius: 4px;
+}
